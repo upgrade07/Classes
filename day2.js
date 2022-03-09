@@ -1,57 +1,38 @@
-/*let a = 10
-switch(true){
-    case a >0:
-        return "positive"
-        break;
-    case a <0:
-        return "negative"
-        break;
-    default:
-        return "its 0"
-        break;
-}*/
+let values = ["a","e","i","o","u"];
 
-/*------------------------*/
+console.log(values.length);
 
-/*let i=0;
-for (; i<9 ; i++){
-    console.log(i);
-}*
+values[10] = 12;
 
-/*------------------------*/
+console.log("Original array "+values);
 
-/*let i = 0 ;
-do{
-    console.log("value of i "+i);
-    i++;
-}
-while(i<10)*/
+values.push(20);
 
-/*------------------------*/
-
-/*function addNum(x,y){
-    console.log(x+y);
-
-}
-addNum(10,2);*/
+console.log("Array after pushing "+values);
 
 
-/*------------------------*/
 
-/*function addNum(x,y){
-    return x+y;
-    
+values.pop();
 
-}
-let result=addNum(10,2);
-console.log(result);*/
+console.log("Array after popping "+values);
 
-/*------------------------*/
+values.shift();
 
-/*const a = function(){
-    console.log();
+console.log("Array after shifting "+values);
+
+values.unshift(1);
+
+console.log("Array after unshifting "+values);
+
+
+function countString(str){
+    let count = 0 
+    for(let i = 0 ; i< str.length ; i++){
+        const element = str[i];
+        if(typeof(element)==="string"){count++}
+    }
+    return count;
 }
 
-const a = () =>{
-
-}*/
+const result = countString(values);
+console.log(result);
